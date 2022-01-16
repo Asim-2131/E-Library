@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="MainCss.css">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <style>
+	  body {
+		  background-image: url('asdf.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed; 
+		  background-size: 100% 100%;
+		}
+	  .center {
+		  margin: auto;
+		  width: 50%;
+		  padding-left:30px;
+		  padding-right:30px;
+		  padding-top:10px;
+		  padding-bottom:10px;
+		  background-color:#fffada;
+		  border-radius:20px;
+		}
+	  </style>
+</head>
+<body>
+<iframe src="LibrarianNavigationBar.jsp" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+	<br><br><br><br><br>
+	<div class="center">
+<h1>Issue Book</h1>
+<br>
+
+	<form action = "IssueBookServlet" method = "post">
+	
+		<div class = "form-group">
+			<label for="fn"> ISBN </label>
+			<input class="form-control"placeholder="Enter ISBN" name = 'iisbn' pattern = "\d{13}" title = "It Contains 13 digits" required><br>
+		</div>
+		<div class = "form-group">
+			<label for="fn"> Student ID </label>
+			<input class="form-control"placeholder="Enter Student ID" name = 'isid' pattern = "^\d{2}\w{3}\d{3}$"  title = "Ex. 18BCE178"required><br>
+		</div>
+		<div class = "form-group">
+			<label for="fn"> Student Name </label>
+			<input class="form-control"placeholder="Enter Name" name = 'isname' required><br>
+		</div>
+		<div class = "form-group">
+			<label for="fn"> Student Mobile </label>
+			<input class="form-control"placeholder="Enter Mobile No." name = 'ismob' pattern = "^(\+91)\d{10}$" title = "10 digits followerd by +91" required><br>
+		</div>
+		<div class="text-center">
+            <button type="submit" name = 'sub' class="btn btn-primary">Issue Book</button>
+    	</div>
+	
+	</form>
+</div>
+</body>
+</html>
